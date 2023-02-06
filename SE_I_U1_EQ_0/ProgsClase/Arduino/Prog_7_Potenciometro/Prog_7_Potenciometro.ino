@@ -1,0 +1,33 @@
+//potenciometr tiene 3 pines :
+//.  PIN 1. - GND / 5V
+//.  PIN 2. -> A0 (PIN ANALOGICO SELECCIONADO)
+//.  PIN 3. - 5V / GND
+
+//ES DECIR UN EXTREMO A 5V Y EL OTRO EXTREMO A GND
+
+////////////////////////////////////////////////////
+
+int pot = A0;  //LOS POTENCIOMETROS SON DISPOSITIVOS ANALOGICOS, POR LO QUE REQUIEREN CONECTARSE A UN PIN ANALOGICO
+//EN ARDUINO, LOS PINES ANALOGICOS SON LOS QUE SE ENCUENTRAN SEÑALADOS CON UN "A" 
+
+void setup(){
+  //LOS PINES ANALOGICOS NO REQUIEREN QUE SE ESTABLEZA EL MODO DE TRABAJO
+
+  Serial.begin(9600);
+}
+
+int valor;
+void loop(){ //16MhZ
+    
+  //LOS PINES ANALOGICOS SOLAMANTE FUNCIONAN COMO ENTRADAS ...
+  
+  valor = analogRead(pot); // ADC => 10bits de RESOLUCION Y TRABAJA CON 5V de VOLTAJE DE REFERENCIA
+  //ESTO SIGNIFICA QUE CUENTA CON 1024 VALORES = > 0 - 1023
+
+  Serial.println(pot);
+
+  delay(500); //ms 
+
+}
+
+
