@@ -3,7 +3,7 @@ import serial as s
 
 arduino = None
 
-arduino = s.Serial("/dev/cu.usbmodem1101", baudrate=9600, timeout=1)
+#arduino = s.Serial("/dev/cu.usbmodem1101", baudrate=9600, timeout=1)
 
 lista = []
 totlecturas = 0
@@ -24,7 +24,8 @@ lista = ['2','3','5','6']
 lista = list(map(int, lista))
 print(lista)
 
-archivo = open("P_3_SendDP_Promedio.csv","a")
+#en windows: \ ...en mac: /   🥺!!
+archivo = open("../../ProgsClase/Archivos/P_3_SendDP_Promedio.csv","w")
 
 #print(archivo.)
 
