@@ -19,6 +19,7 @@ while i < totlecturas:
     lista.append(cadena)
     i+=1
 
+print(lista)
 
 lista = list(map(int, lista))
 

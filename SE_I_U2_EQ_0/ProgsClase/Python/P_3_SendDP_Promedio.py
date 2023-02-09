@@ -3,10 +3,10 @@ import serial as s
 
 arduino = None
 
-#arduino = s.Serial("/dev/cu.usbmodem1101", baudrate=9600, timeout=1)
+arduino = s.Serial("/dev/cu.usbmodem1101", baudrate=9600, timeout=1)
 
 lista = []
-totlecturas = 0
+totlecturas = 5
 i = 0
 while i < totlecturas:
     cadena = arduino.readline()
@@ -20,17 +20,14 @@ while i < totlecturas:
         lista.append(cadena)
         i+=1
 
-lista = ['2','3','5','6']
 lista = list(map(int, lista))
 print(lista)
 
 #en windows: \ ...en mac: /   🥺!!
 archivo = open("../../ProgsClase/Archivos/P_3_SendDP_Promedio.csv","w")
 
-#print(archivo.)
-
 for lectura in lista:#
-    print(lectura)
+    #print(lectura)
     archivo.write(str(lectura) + ",")
 
 

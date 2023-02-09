@@ -1,8 +1,9 @@
 
-import serial as s
+import serial as s   #pyserial
 
-arduino = None
+arduino = None #🥹🥹
 
+#arduino = s.Serial("COM3", baudrate=9600, timeout=1)
 arduino = s.Serial("/dev/cu.usbmodem1101", baudrate=9600, timeout=1)
 
 while True:
@@ -12,7 +13,7 @@ while True:
     #print(cadena)  ## imprime como...419 con saltos de linea entre impresion
     cadena = cadena.replace("\n","")
     cadena = cadena.replace("\r", "")
-    print(cadena * 2 )  ##<<----
+    print(cadena * 3 )  ##<<----
 
 
 
