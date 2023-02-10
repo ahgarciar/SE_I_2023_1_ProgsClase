@@ -24,7 +24,8 @@ lista = list(map(int, lista))
 print(lista)
 
 #en windows: \ ...en mac: /   🥺!!
-archivo = open("../../ProgsClase/Archivos/P_3_SendDP_Promedio.csv","w")
+archivo = open("..\..\ProgsClase\Archivos\P_3_SendDP_Promedio.csv","w")
+#archivo = open("../../ProgsClase/Archivos/P_3_SendDP_Promedio.csv","w")
 
 for lectura in lista:#
     #print(lectura)
